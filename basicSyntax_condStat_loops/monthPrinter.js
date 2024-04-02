@@ -1,0 +1,42 @@
+function month(num) {
+
+    if (num == 1) {
+        console.log('January');
+    } else if (num == 2) {
+        console.log('February');
+    } else if (num == 3) {
+        console.log('March');
+    } else if (num == 4) {
+        console.log('April');
+    } else if (num == 5) {
+        console.log('May');
+    } else if (num == 6) {
+        console.log('June');
+    } else if (num == 7) {
+        console.log('July');
+    } else if (num == 8) {
+        console.log('August');
+    } else if (num == 9) {
+        console.log('September');
+    } else if (num == 10) {
+        console.log('October');
+    } else if (num == 11) {
+        console.log('November');
+    } else if (num == 12) {
+        console.log('December');
+    } else {
+        console.log('Error!');
+    }
+
+}
+
+month(1)
+month(3)
+month(2)
+month(4)
+month(12)
+month(7)
+month(8)
+month(10)
+month(13)
+month(0)
