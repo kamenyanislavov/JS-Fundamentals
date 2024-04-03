@@ -7,7 +7,7 @@ function pyramidOfKingDjoser(base, increment) {
     let stepsCounter = 0;
     let height = 0;
 
-    for (let i = base; i >= 0; i -= 2) {
+    for (let i = base; i >= 1; i -= 2) {
         let blocksPerStep = 0;
         let stepStoneBlocks = 0;
         let stepMarbleBlocks = 0;
@@ -20,26 +20,27 @@ function pyramidOfKingDjoser(base, increment) {
         stoneBlocks += stepStoneBlocks;
 
         if (stepsCounter % 5 == 0) {
-            stepLapisBlocks = (blocksPerStep - stepStoneBlocks);
+            stepLapisBlocks = (i * 2 + (i - 2) * 2) * increment;
             lapisBlocks += stepLapisBlocks;
         } else {
-            stepMarbleBlocks = (blocksPerStep - stepStoneBlocks);
+            stepMarbleBlocks = (i * 2 +(i - 2) * 2) * increment;
             marbleBlocks += stepMarbleBlocks;
         }
     }
     if (base % 2 == 0) {
-        stoneBlocks -= 4;
+        marbleBlocks -= (4 * increment);
         goldBlocks += (4 * increment);
-        stepsCounter -= 1;
     } else {
-        stoneBlocks -= 1 * (increment);
-        goldBlocks += Math.ceil(1 * increment);
+        stoneBlocks -= (1 * increment);
+        goldBlocks += (1 * increment);
     }
 
-    if (stepsCounter == 1 && increment < 1) {
-        height = Math.ceil(increment);
+    height = stepsCounter * increment;
+
+    if (height < 1) {
+        height = increment;
     } else {
-        height = Math.floor(stepsCounter * increment);
+        height = Math.floor(height);
     }
 
     console.log(`Stone required: ${Math.ceil(stoneBlocks)}`);
