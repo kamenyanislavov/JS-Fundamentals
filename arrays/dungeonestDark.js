@@ -9,7 +9,11 @@ function dungeonestDark(array) {
         let room = newArray[i].split(' ')
 
         if (room[0] == 'potion') {
-            console.log(`You healed for ${room[1]} hp.`);
+            if ((health + Number(room[1])) >= 100) {
+                console.log(`You healed for ${100 - health} hp.`);
+            }else{
+                console.log(`You healed for ${room[1]} hp.`);
+            }
             health += Number(room[1]);
             if (health > 100) {
                 health = 100;
