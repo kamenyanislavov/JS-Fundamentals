@@ -1,0 +1,31 @@
+h1{
+    color: green;
+    text-align: center;
+}
+ol{
+    color: red;
+    font-size: 20px;
+}
+ul{
+    color: blue;
+    font-size: 20px;
+}
+p{
+    font-size: 20px;
+    text-wrap: ;
+}
+
+.shopping-list{
+    width: 750px;
+    margin-left: auto;
+}
+
+/* li:hover{
+    visibility: hidden;
+} */
+
+/* this is id selector. It is not good practice to use it!
+#favourite-sport{
+    color: green;
+}*/
+
