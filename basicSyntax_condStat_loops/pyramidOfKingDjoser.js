@@ -7,41 +7,38 @@ function pyramidOfKingDjoser(base, increment) {
     let stepsCounter = 0;
     let height = 0;
 
-    for (let i = base; i >= 1; i -= 2) {
-        let blocksPerStep = 0;
-        let stepStoneBlocks = 0;
-        let stepMarbleBlocks = 0;
-        let stepLapisBlocks = 0;
+    for (let i = base; i > 0; i -= 2) {
 
         stepsCounter++
 
-        blocksPerStep = (i * i) * increment;
-        stepStoneBlocks = ((i - 2) * (i - 2)) * increment;
-        stoneBlocks += stepStoneBlocks;
+        stoneBlocks += ((i - 2) * (i - 2)) * increment;
 
         if (stepsCounter % 5 == 0) {
-            stepLapisBlocks = (i * 2 + (i - 2) * 2) * increment;
-            lapisBlocks += stepLapisBlocks;
+            lapisBlocks += (i * 4 - 4) * increment;
         } else {
-            stepMarbleBlocks = (i * 2 +(i - 2) * 2) * increment;
-            marbleBlocks += stepMarbleBlocks;
+            marbleBlocks += (i * 4 - 4) * increment;
         }
     }
+
     if (base % 2 == 0) {
-        marbleBlocks -= (4 * increment);
-        goldBlocks += (4 * increment);
+        if (stepsCounter % 5 == 0) {
+            lapisBlocks -= 4 * increment;
+            goldBlocks += 4 * increment;
+        } else {
+            marbleBlocks -= 4 * increment;
+            goldBlocks += 4 * increment;
+        }
     } else {
-        stoneBlocks -= (1 * increment);
-        goldBlocks += (1 * increment);
+        if (stepsCounter % 5 == 0){
+            lapisBlocks -= 1 * increment;
+            goldBlocks += 1 * increment;
+        } else {
+            stoneBlocks -= 1 * increment;
+            goldBlocks += 1 * increment;
+        }
     }
 
-    height = stepsCounter * increment;
-
-    if (height < 1) {
-        height = increment;
-    } else {
-        height = Math.floor(height);
-    }
+    height = Math.floor(stepsCounter * increment);
 
     console.log(`Stone required: ${Math.ceil(stoneBlocks)}`);
     console.log(`Marble required: ${Math.ceil(marbleBlocks)}`);
@@ -50,4 +47,4 @@ function pyramidOfKingDjoser(base, increment) {
     console.log(`Final pyramid height: ${height}`);
 }
 
-pyramidOfKingDjoser(23, 0.5)
+pyramidOfKingDjoser(11, 0.75)
