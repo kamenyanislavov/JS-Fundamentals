@@ -33,6 +33,8 @@ function login(input) {
     }
 }
 
-// login(['Acer', 'login', 'go', 'let me in', 'recA'])
-// login(['momo','omom'])
+login(['Acer', 'login', 'go', 'let me in', 'recA'])
+console.log('---------------');
+login(['momo','omom'])
+console.log('------------------');
 login(['sunny','rainy','cloudy','sunny','not sunny']);

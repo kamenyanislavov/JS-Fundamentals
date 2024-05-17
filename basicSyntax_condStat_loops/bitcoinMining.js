@@ -1,7 +1,7 @@
 function bicoinMining(input) {
 
-    let bitcoinPrice = 11949.16;  // price per piece
-    let goldPrice = 67.51;  // price per gram
+    const bitcoinPrice = 11949.16;  // price per piece
+    const goldPrice = 67.51;  // price per gram
     let counter = 0;
     let day = 0;
     let bitcoins = 0;
@@ -13,8 +13,8 @@ function bicoinMining(input) {
     for (let i = 0; i < input.length; i++) {
         gold = input[i];
         counter++
-        // check if we have enough money for the first bitcoin
-
+        
+        // check if it is every third day, so someone has stolen 30% of our gain
         if (counter % 3 == 0) {
             total_gold += gold * 0.70;
         } else {
@@ -28,12 +28,10 @@ function bicoinMining(input) {
             day++
             break;
         }
+        // buy the bitcoins and calculate the rest of the money
         bitcoins = Math.floor(money / bitcoinPrice);
         money -= bitcoins * bitcoinPrice;
     }
-
-    // buy the bitcoins and calculate the rest of the money
-
 
     console.log(`Bought bitcoins: ${bitcoins}`);
     if (bitcoins > 0) {

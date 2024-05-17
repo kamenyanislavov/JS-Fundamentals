@@ -1,4 +1,4 @@
-function leapYear(year) {
+function leapYearCheck(year) {
 
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
         console.log('yes');
@@ -7,6 +7,6 @@ function leapYear(year) {
     }
 }
 
-leapYear(1984)
-leapYear(2003)
-leapYear(4)
+leapYearCheck(1984)
+leapYearCheck(2003)
+leapYearCheck(4)

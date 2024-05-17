@@ -1,4 +1,4 @@
-function ages(age) {
+function ageGroupDetermination(age) {
 
     let person = '';
 
@@ -21,8 +21,8 @@ function ages(age) {
 }
 
 
-ages(20)
-ages(5)
-ages(40)
-ages(90)
-ages(-2)
+ageGroupDetermination(20)
+ageGroupDetermination(5)
+ageGroupDetermination(40)
+ageGroupDetermination(90)
+ageGroupDetermination(-2)
