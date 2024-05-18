@@ -32,11 +32,9 @@ button {
     color: white;
 }
 
-.icon button img {
-    width: 15px;
-    height: 15px;
-    margin-right: 3px;
-    background-color: transparent;
+.icon button i {
+    margin-right: 6px;
+
 }
 
 .leftmostbutton{
