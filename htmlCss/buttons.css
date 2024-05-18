@@ -1,8 +1,24 @@
-body{
-    background-color: lightgray;
+h2 {
+    
+    text-indent: 40px;
 }
 
-button{
+.firstheader{
+    margin-top: 60px;
+}
+
+.otherheaders{
+    margin-top: 30px;
+}
+
+.panel {
+    background-color: #EEEEEE;
+    max-width: 450px;
+    height: 450px;
+    border: 1px solid;
+}
+
+button {
     border-radius: 14px;
     border: 2px solid #333333;
     padding: 8px 14px;
@@ -10,18 +26,24 @@ button{
     background-color: transparent;
 }
 
-.filled button, icon button{
+.filled button,
+.icon button {
     background-color: #333333;
     color: white;
 }
 
-.icon button img{
+.icon button img {
     width: 15px;
     height: 15px;
     margin-right: 3px;
+    background-color: transparent;
 }
 
-button:hover{
+.leftmostbutton{
+    margin-left: 30px;
+}
+
+button:hover {
     background-color: green;
     color: white;
     cursor: pointer;
