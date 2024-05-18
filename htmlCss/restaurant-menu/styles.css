@@ -1,0 +1,16 @@
+body{
+    max-width: 800px;
+    text-align: center;
+}
+
+h1, p{
+    font-family: Times, serif;
+    color: #717274;
+}
+
+h2{
+    color: #4D4861;
+    font-style: italic;
+    font-size: large;
+
+}
