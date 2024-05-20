@@ -36,21 +36,15 @@ function diagonalAttack(array) {
             let currentArray = currentEl[0].split(' ');
             let currentArray1 = currentEl[0].split(' ').reverse();
 
-            for (let j = 0; j < currentArray.length / 2; j++) {
-                if (i != j) {
+            
+            for (let j = 0; j < currentArray.length; j++) {
+                if (j != i && j != (currentArray.length - 1 - i)) {
                     currentArray[j] = sum1;
                 }
+                
             }
-            for (let j = 0; j < currentArray.length/2; j++) {
-                if (i != j) {
-                    currentArray1[j] = sum1;
-                }
-            }
-
             console.log(currentArray.join(' '));
-
-
-
+            
             currentEl = [];
             currentArray = [];
             elAsNum = null;
