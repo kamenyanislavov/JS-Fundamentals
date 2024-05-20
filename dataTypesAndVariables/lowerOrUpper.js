@@ -8,7 +8,7 @@ function lowerOrUpper(char) {
     }
 
     isUpper ? result = 'upper-case' : result = 'lower-case';
-    console.log(result);
+    return result;
 
 }
 

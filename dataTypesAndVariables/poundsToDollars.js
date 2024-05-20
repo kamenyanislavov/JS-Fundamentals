@@ -1,6 +1,6 @@
 function poundsToDollars(pounds) {
 
-    let exchangeRate = 1.31;
+   const exchangeRate = 1.31;
     let dollars = pounds * exchangeRate;
 
     console.log(`${dollars.toFixed(3)}`);
