@@ -1,5 +1,7 @@
 function condenseToNum(numbers) {
 
+    let output = '';
+
     while (numbers.length > 1) {
         let condensed = [];
 
@@ -11,7 +13,9 @@ function condenseToNum(numbers) {
         numbers = condensed;
     }
 
-    console.log(numbers.join());
+    output = `${numbers}`
+    
+    return output;
 }
 
 condenseToNum([2, 10, 3]);
