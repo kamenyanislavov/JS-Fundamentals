@@ -6,16 +6,19 @@ function passwordCheck(array) {
     let password = passwordFind(username);
 
     function passwordFind(username) {
-        let array = username.split('');
-        let reversedArray = array.reverse();
-        let password = reversedArray.join('');
+        let password = '';
+
+        for (let j = username.length - 1; j >= 0; j--) {
+            password += username[j];
+        }
+
         return password;
     }
 
     for (let i = 1; i < array.length; i++) {
         let guess = array[i];
         attempts++
-        
+
         if (guess != password) {
             if (attempts == 4) {
                 isBlocked = true;
