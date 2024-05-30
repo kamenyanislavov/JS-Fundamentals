@@ -20,7 +20,6 @@ function ladyBugs(array) {
 
     }
 
-
     let position, direction, flight;
 
     // take the moves one by one 
@@ -39,13 +38,13 @@ function ladyBugs(array) {
 
                 // checking the direction
                 if (direction == 'right') {
-                    for (let l = k; l < playField.length; l++) {
+                    for (let l = k; l < playField.length; l += flight) {
 
                         // check if the flight is inside the playground. If not, the ladybug flies away
                         if (l + flight > playField.length - 1 || l + flight < 0) {
                             playField[k] = isEmpty;
                             break;
-                        } 
+                        }
                         // check if the field is empty so the ladybug can land there
                         else if (playField[l + flight] == isEmpty) {
                             playField[k] = isEmpty;
@@ -57,11 +56,11 @@ function ladyBugs(array) {
                 } else {
 
                     // check the same conditions for the other direction - to the left
-                    for (let l = k; l >= 0; l--) {
+                    for (let l = k; l >= 0; l -= flight) {
                         if (l - flight < 0 || l - flight > playField.length - 1) {
                             playField[k] = isEmpty;
                             break;
-                        } else if (playField[l - flight] == isEmpty){
+                        } else if (playField[l - flight] == isEmpty) {
                             playField[k] = isEmpty;
                             playField[l - flight] = isFull;
                             break;
@@ -80,8 +79,10 @@ function ladyBugs(array) {
 
 }
 
-ladyBugs([3, '0 1', '0 right 1', '2 right 1']);
+ladyBugs([3, '0 1', '10 right 1', '12 right 1']);
 console.log('--------------------------');
-ladyBugs([3, '0 1 2', '0 right 1', '1 right 1', '2 right 1']);
+ladyBugs([5, '0 1 2', '0 right 1', '1 right 1', '2 right 1', '4 left 3', '3 left 3']);
 console.log('---------------------------');
 ladyBugs([5, '3', '3 left 2', '1 left -2']);
+console.log('---------------------------');
+ladyBugs([5, '0 2', '0 right 2', '2 right 2']);
