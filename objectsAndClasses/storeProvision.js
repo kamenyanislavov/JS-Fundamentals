@@ -20,6 +20,7 @@ function localStore(currentStock, orderedStock) {
         stockAfterDelivery.product = currentStock[i];
         stockAfterDelivery.productQuantity = currentStock[i + 1];
         console.log(`${stockAfterDelivery["product"]} -> ${stockAfterDelivery["productQuantity"]}`);
+        // console.log(`${currentStock[i]} -> ${currentStock[i + 1]}`);
     }
 }
 
