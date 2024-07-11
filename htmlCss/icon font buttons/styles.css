@@ -1,0 +1,24 @@
+button{
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.click{
+    background-color: green;
+}
+
+.mail{
+    background-color: orange;
+}
+
+button i{
+    margin-right: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}

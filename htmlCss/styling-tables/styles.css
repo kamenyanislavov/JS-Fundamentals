@@ -1,0 +1,21 @@
+th,
+td {
+    text-indent: 5px;
+    width: 150px;
+    height: 30px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    border: 1px solid #CCCCCC;
+    color: #5D6572
+}
+
+th {
+    text-align: center;
+    background-color: #ADD8E6;
+    border: 1px solid #CCCCCC;
+    color: #1E1937;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

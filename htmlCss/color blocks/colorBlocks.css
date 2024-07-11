@@ -1,0 +1,24 @@
+
+.green-block{
+    background-color: green;
+
+}
+.blue-block{
+    background-color: blue;
+}
+.red-block{
+    background-color: red;
+    
+}
+.purple-block{
+    background-color: purple;
+}
+.orange-block{
+    background-color: orange;
+}
+div{
+    display: inline-block;
+}
+.site-content{
+    width: 200px;
+}

@@ -1,0 +1,49 @@
+h2 {
+    
+    text-indent: 40px;
+}
+
+.firstheader{
+    margin-top: 60px;
+}
+
+.otherheaders{
+    margin-top: 30px;
+}
+
+.panel {
+    background-color: #EEEEEE;
+    max-width: 450px;
+    height: 450px;
+    border: 1px solid;
+}
+
+button {
+    border-radius: 14px;
+    border: 2px solid #333333;
+    padding: 8px 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.filled button,
+.icon button {
+    background-color: #333333;
+    color: white;
+}
+
+.icon button i {
+    margin-right: 6px;
+
+}
+
+.leftmostbutton{
+    margin-left: 30px;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+}
